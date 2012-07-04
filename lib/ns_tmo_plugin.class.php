@@ -40,7 +40,8 @@ class NS_TMO_Plugin {
 		
 		$term = get_term($term_id, $taxonomy);
 		
-		return $term->$custom_column;
+		if( isset( $term->$custom_column ) )
+			return $term->$custom_column;
 		
 	}
 	
