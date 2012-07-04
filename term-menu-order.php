@@ -4,7 +4,7 @@ Plugin Name: Term Menu Order
 Plugin URI: https://github.com/kalchas
 Description: Creates a 'menu_order' column to specify term order, allowing theme and plugin developers to sort term by menu order.
 Author: James Lafferty
-Version: 0.3.1
+Version: 0.4
 Author URI: https://github.com/kalchas
 License: GPL2
 */

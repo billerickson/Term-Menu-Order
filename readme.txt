@@ -4,7 +4,7 @@ Tags: developer, menu order, terms, taxonomy, taxonomies, wp_terms, menu_order
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JSL4JTA4KMZLG
 Requires at least: 3.0.1
 Tested up to: 3.2.1
-Stable tag: 0.3.1
+Stable tag: 0.4
 
 Creates a 'menu_order' column to specify term order, allowing theme and plugin developers to sort term by menu order.
 
@@ -17,6 +17,8 @@ fetch terms to use 'menu_order' as a sort order. Here's an example:
 
 `$terms = get_terms('category', array( 'orderby' => 'menu_order' ) );`
 
+[Documentation](https://github.com/billerickson/Term-Menu-Order/wiki) | [Support Forum](https://github.com/billerickson/Term-Menu-Order/issues)
+
 == Installation ==
 1. Upload the term-menu-order to /wp-content/plugins/.
 1. Activate the plugin through the "Plugins" menu in WordPress.
@@ -28,6 +30,11 @@ fetch terms to use 'menu_order' as a sort order. Here's an example:
 3. 'menu_order' available when editing a term.
 
 == Changelog ==
+
+= 0.4.0 =
+* Only delete data when plugin is deleted, not on deactivation
+* Other minor bug fixes based on messages in support forum
+
 = 0.3.1 =
 * Re-added French language support.
 * Added Spanish language support. Thank you to Ivan Vasquez for this contribution!
