@@ -20,7 +20,7 @@ class NS_TMO_Plugin {
 		
 		register_activation_hook(self::$plugin_path, array(&$this, 'activate'));
 
-		add_action('init', array(&$this, 'init'));
+		add_action( 'init', array(&$this, 'init'), 99 );
 		
 		self::load_text_domain();
 		
