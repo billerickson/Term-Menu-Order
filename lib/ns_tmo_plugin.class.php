@@ -20,8 +20,6 @@ class NS_TMO_Plugin {
 		
 		register_activation_hook(self::$plugin_path, array(&$this, 'activate'));
 
-		register_deactivation_hook(self::$plugin_path, array(&$this, 'deactivate'));
-
 		add_action('init', array(&$this, 'init'));
 		
 		self::load_text_domain();
@@ -129,18 +127,7 @@ class NS_TMO_Plugin {
 		$wpdb->query($sql);
 		
 	}
-	
-	public function deactivate () {
 		
-		global $wpdb;
-		
-		$sql = "ALTER TABLE `{$wpdb->terms}` DROP COLUMN `menu_order`;";
-		
-		$wpdb->query($sql);
-		
-	}
-	
-	
 	public function init () {
 		
 		self::$taxonomies = apply_filters( 'term_menu_order_taxonomies', get_taxonomies() );
